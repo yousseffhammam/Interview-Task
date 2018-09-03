@@ -1,0 +1,36 @@
+body{
+  font-family: Roboto;
+  width: 750px;
+  margin: 0 auto;
+}
+fieldset{
+  border: 8px solid yellow;
+  padding: 10px 20px;
+  margin-bottom: 10px;
+}
+label {
+  width: 180px;
+  display: inline-block;
+  text-align: right;
+}
+input[type="number"] {
+    width: 30px;
+}
+.s, .r{
+  padding: 1px 4px;
+}
+.s{
+  background-color: RED;
+}
+.r {
+ background-color: purple;
+}
+div{
+  text-align: center;
+  display: inline-block;
+  width: 40px;
+  color: white;
+}
+textarea {
+  width: 300px;
+}

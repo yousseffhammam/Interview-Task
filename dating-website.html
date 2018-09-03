@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dating Website</title>
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+  <body>
+    <h1>Please Enter Your Details For Our Dating Website!</h1>
+    <form action="index.html" method="post">
+      <fieldset>
+        <legend>Your Face</legend>
+
+        <label for="img">Your Image:</label>
+        <input type="file">
+        <br>
+        <label for="imgPreview">Image Preview:</label>
+        <img id="imgPreview">
+      </fieldset>
+
+      <fieldset>
+        <legend>Your General Details</legend>
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Your Full Name">
+        <br>
+
+        <label for="gender">Gender:</label>
+        <input type="radio" name="gender">Male</input>
+        <input type="radio" name="gender">Female</input>
+        <br>
+
+        <label for="age">Age:</label>
+        <input type="number" value="18"></input>
+        <br>
+
+        <label for="dateOfBirth">Date of birth:</label>
+        <input type="date" name="dateOfBirth">
+        <br>
+
+        <label for="colors">Favourite Color:</label>
+        <input type="color" name="color">
+        <br>
+
+        <label for="country">Which country</label>
+        <select name="country">
+          <option value="nothing"></option>
+          <option value="Egypt">Egypt</option>
+          <option value="Russia">Russia</option>
+          <option value="Germany">Germany</option>
+        </select>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Indicators</legend>
+        <label>Height:</label>
+        <div class="s">Short</div>
+        <input type="range" min="0" max="100">
+        <div class="r">Tall</div>
+        <br>
+        <label>Salary:</label>
+        <div class="s">Poor</div>
+        <input type="range" min="0" max="100">
+        <div class="r">Rich</div>
+
+      </fieldset>
+
+      <fieldset>
+        <legend>Your Contact Information</legend>
+        <label for="email">Email:</label>
+        <input type="email">
+        <br>
+
+        <label for="mobile">Mobile:</label>
+        <input type="tel">
+        <br>
+
+        <label for="adress">Adress:</label>
+        <textarea name="adress"></textarea>
+        <br>
+        <label>Method to contact you:</label>
+        <input type="checkbox">Emial</input>
+        <input type="checkbox">Whatsapp</input>
+        <input type="checkbox">In-app Chat</input>
+      </fieldset>
+
+      <input type="submit">
+    </form>
+  </body>
+  <script type="text/javascript">
+  window.onload = function() {
+  var files = document.querySelectorAll("input[type=file]");
+  files[0].addEventListener("change", function(e) {
+      if(this.files && this.files[0]) {
+          var reader = new FileReader();
+          reader.onload = function(e) { document.getElementById("imgPreview").setAttribute("src", e.target.result); }
+          reader.readAsDataURL(this.files[0]);
+      }
+  });
+}
+  </script>
+</html>
